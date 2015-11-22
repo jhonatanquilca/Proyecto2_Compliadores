@@ -20,7 +20,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Token tk = new Token("int i=5+a+b*3+(4/2);");
+        Token tk = new Token("b-a");
         String[][] tokens = tk.getToken();
         for (int i = 0; i < tokens.length; i++) {
             System.out.print(tokens[i][0]);

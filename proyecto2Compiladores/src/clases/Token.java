@@ -42,7 +42,6 @@ public class Token {
 
     public String[] separateTocken() {
         Lenguaje leng = new Lenguaje();
-
         String aux = "";
         for (int i = 0; i < sentencia.length(); i++) {
             String tipoAct = leng.getTipo(sentencia.charAt(i) + "");
@@ -53,13 +52,13 @@ public class Token {
                 aux += sentencia.charAt(i);
             } else if (leng.esEspacio(sentencia.charAt(i) + "")) {
             } else {
-                aux += "_" + sentencia.charAt(i);
+                aux += "/" + sentencia.charAt(i);
 
             }
 
         }
-//        aux += "_";
-        return aux.split("_");
+
+        return aux.split("/");
     }
 
     public String[][] getToken() {
