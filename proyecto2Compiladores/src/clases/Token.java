@@ -52,13 +52,13 @@ public class Token {
                 aux += sentencia.charAt(i);
             } else if (leng.esEspacio(sentencia.charAt(i) + "")) {
             } else {
-                aux += "/" + sentencia.charAt(i);
+                aux += "§" + sentencia.charAt(i);
 
             }
 
         }
 
-        return aux.split("/");
+        return aux.split("§");
     }
 
     public String[][] getToken() {
